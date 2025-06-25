@@ -8,10 +8,10 @@ const menu = {
                 this.dishes[i].count++;
                 return;
             }
-            this.dishes.push({id:dishId,name:dishName,price:dishPrice});
         }
+        this.dishes.push({id:dishId,name:dishName,price:dishPrice,count:1});
     },
-    removeDish(id){
+    removeDish(dishId){
         for(let i=0;i<this.dishes.length;i++){
             if(this.dishes[i].id===dishId){
                 if(this.dishes[i].count>1){
